@@ -30,7 +30,7 @@ Follow the steps below to get the project up and running on your machine.
 
     ```bash
     git clone https://github.com/S09Z/roadmap-project-task-todo.git
-    cd task-tracker-cli
+    cd roadmap-project-task-todo
     ```
 
 2. **Create a virtual environment (optional but recommended)**:
@@ -57,8 +57,8 @@ Alternatively, you can use **Poetry** to manage the virtual environment and depe
 2. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/<your-username>/task-tracker-cli.git
-    cd task-tracker-cli
+    git clone https://github.com/S09Z/roadmap-project-task-todo.git
+    cd roadmap-project-task-todo
     ```
 
 3. **Install dependencies and setup environment**:
@@ -84,54 +84,54 @@ Alternatively, you can use **Poetry** to manage the virtual environment and depe
     1. **Add a new task**:
 
         ```bash
-        python task-cli.py add "Buy groceries"
+        python task_cli.py add "Buy groceries"
         ```
 
     2. **Update a task**:
 
         ```bash
-        python task-cli.py update 1 "Buy groceries and cook dinner"
+        python task_cli.py update 1 "Buy groceries and cook dinner"
         ```
 
     3. **Delete a task**:
 
         ```bash
-        python task-cli.py delete 1
+        python task_cli.py delete 1
         ```
 
     4. **Mark a task as in progress**:
 
         ```bash
-        python task-cli.py mark-in-progress 1
+        python task_cli.py mark-in-progress 1
         ```
 
     5. **Mark a task as done**:
 
         ```bash
-        python task-cli.py mark-done 1
+        python task_cli.py mark-done 1
         ```
 
     6. **List all tasks**:
 
         ```bash
-        python task-cli.py list
+        python task_cli.py list
         ```
 
     7. **List tasks by status**:
 
         - List done tasks:
           ```bash
-          python task-cli.py list done
+          python task_cli.py list done
           ```
 
         - List tasks in progress:
           ```bash
-          python task-cli.py list in-progress
+          python task_cli.py list in-progress
           ```
 
         - List tasks to do:
           ```bash
-          python task-cli.py list todo
+          python task_cli.py list todo
           ```
 
 ## JSON Storage
