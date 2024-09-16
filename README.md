@@ -26,7 +26,7 @@ Follow the steps below to get the project up and running on your machine.
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/<your-username>/task-tracker-cli.git
+    git clone https://github.com/S09Z/roadmap-project-task-todo.git
     cd task-tracker-cli
     ```
 
