@@ -16,10 +16,13 @@ Task Tracker is a command-line interface (CLI) application that helps you manage
 ## Requirements
 
 - Python 3.6 or higher
+- (Optional) [Poetry](https://python-poetry.org/) for dependency and environment management
 
 ## How to Run
 
 ### 1. Clone and Setup the Project
+
+#### Option 1: Standard Python Virtual Environment Setup
 
 Follow the steps below to get the project up and running on your machine.
 
@@ -39,62 +42,97 @@ Follow the steps below to get the project up and running on your machine.
 
 3. **Install the required dependencies** (if any, but in this case, the project doesn't have external dependencies).
 
-### 2. Run the Following Commands
+#### Option 2: Using Poetry for Setup
 
-Once the project is cloned and the environment is set up, you can start using the CLI to manage tasks. Below are the commands:
+Alternatively, you can use **Poetry** to manage the virtual environment and dependencies. Follow these steps:
 
-1. **Add a new task**:
-
-    ```bash
-    python task-cli.py add "Buy groceries"
-    ```
-
-2. **Update a task**:
+1. **Install Poetry** (if not already installed):
 
     ```bash
-    python task-cli.py update 1 "Buy groceries and cook dinner"
+    curl -sSL https://install.python-poetry.org | python3 -
     ```
 
-3. **Delete a task**:
+    Or follow the installation guide from the official [Poetry documentation](https://python-poetry.org/docs/#installation).
+
+2. **Clone the repository**:
 
     ```bash
-    python task-cli.py delete 1
+    git clone https://github.com/<your-username>/task-tracker-cli.git
+    cd task-tracker-cli
     ```
 
-4. **Mark a task as in progress**:
+3. **Install dependencies and setup environment**:
+
+    Poetry will automatically create a virtual environment for you and install the dependencies.
 
     ```bash
-    python task-cli.py mark-in-progress 1
+    poetry install
     ```
 
-5. **Mark a task as done**:
+4. **Activate the virtual environment**:
+
+    To use the environment Poetry created, you can activate it with:
 
     ```bash
-    python task-cli.py mark-done 1
+    poetry shell
     ```
 
-6. **List all tasks**:
+5. **Run the following commands** inside the Poetry shell (or using `poetry run`):
 
-    ```bash
-    python task-cli.py list
-    ```
+    Once the project is set up, you can start using the CLI to manage tasks.
 
-7. **List tasks by status**:
+    1. **Add a new task**:
 
-    - List done tasks:
-      ```bash
-      python task-cli.py list done
-      ```
+        ```bash
+        python task-cli.py add "Buy groceries"
+        ```
 
-    - List tasks in progress:
-      ```bash
-      python task-cli.py list in-progress
-      ```
+    2. **Update a task**:
 
-    - List tasks to do:
-      ```bash
-      python task-cli.py list todo
-      ```
+        ```bash
+        python task-cli.py update 1 "Buy groceries and cook dinner"
+        ```
+
+    3. **Delete a task**:
+
+        ```bash
+        python task-cli.py delete 1
+        ```
+
+    4. **Mark a task as in progress**:
+
+        ```bash
+        python task-cli.py mark-in-progress 1
+        ```
+
+    5. **Mark a task as done**:
+
+        ```bash
+        python task-cli.py mark-done 1
+        ```
+
+    6. **List all tasks**:
+
+        ```bash
+        python task-cli.py list
+        ```
+
+    7. **List tasks by status**:
+
+        - List done tasks:
+          ```bash
+          python task-cli.py list done
+          ```
+
+        - List tasks in progress:
+          ```bash
+          python task-cli.py list in-progress
+          ```
+
+        - List tasks to do:
+          ```bash
+          python task-cli.py list todo
+          ```
 
 ## JSON Storage
 
@@ -104,13 +142,13 @@ All tasks are saved in a `tasks.json` file in the current directory. This file w
 
 The project includes automated tests written using `pytest`. To run the tests:
 
-1. Install `pytest` if you haven't already:
+1. **If using Poetry**, run the tests inside the Poetry environment:
 
     ```bash
-    pip install pytest
+    poetry run pytest
     ```
 
-2. Run the tests:
+2. **If using standard environment**, run the tests:
 
     ```bash
     pytest
